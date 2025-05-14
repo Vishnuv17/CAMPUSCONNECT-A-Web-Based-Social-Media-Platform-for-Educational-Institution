@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="registerStyle.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>CampusConnect</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form onsubmit="return false;">
+                <h1>Create Account</h1>
+                <span style="padding: 15px;">Register with your personal details to use all of site features</span>
+
+                <span id="errorMsg" style="color: red; font-size: 0.9rem;"></span>
+
+                <div class="input-group">
+                    <span class="inputIcons"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" id="name" placeholder="Name" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="inputIcons"><i class="fa-solid fa-id-card"></i></span>
+                    <input type="text" id="register_number" placeholder="Register Number" required>
+                    <span class="inputIcons rnoError"><i class="fa-solid fa-circle-xmark"></i></span>
+                </div>
+
+                <div class="input-group">
+                    <span class="inputIcons"><i class="fa-solid fa-at"></i></span>
+                    <input type="text" id="username" placeholder="@Username" required>
+                    <span class="inputIcons usernameError"><i class="fa-solid fa-circle-xmark"></i></span>
+                </div>
+
+                
+
+                <div class="input-group">
+                    <span class="inputIcons"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="inputIcons"><i class="fa-solid fa-phone"></i></span>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="inputIcons"><i class="fa-solid fa-user-tie"></i></span>
+                    <select id="designation" required>
+                        <option value="" disabled selected>Select Designation</option>
+                        <option value="Student">Student</option>
+                        <option value="Staff">Staff</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <span class="inputIcons"><i class="fa-solid fa-user-graduate"></i></span>
+                    <select id="department" required>
+                        <option value="" disabled selected>Select Department</option>
+                        <option value="MCA">MCA</option>
+                        <option value="MBA">MBA</option>
+                        <option value="CSE">CSE</option>
+                        <option value="IT">IT</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="MECH">MECH</option>
+                        <option value="CIVIL">CIVIL</option>
+                        <option value="BIO Medical">BIO Medical</option>
+                        <option value="others">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <span class="inputIcons"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" onclick="signUp()">Sign Up</button>
+            </form>
+        </div>
+        
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                
+                <div class="input-group">
+                    <span class="inputIcons"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" id="signInEmail" placeholder="Email">
+                </div>
+                
+                <div class="input-group">
+                    <span class="inputIcons"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" id="signInPassword" placeholder="Password">
+                </div>
+                <a href="#">Forget Your Password?</a>
+                <button type="button" onclick="signIn()">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/redirects.js"></script>  
+    <script type="module" src="/js/register.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
